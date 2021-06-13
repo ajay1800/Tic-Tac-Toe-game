@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(26, 0, 48);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.won{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(26, 25, 25, 0.61);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+    z-index: 9999;
+}
+.win_text{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 300;
+    font-family: Monotype Corsiva;
+}
+.new_game button{
+    width: 150px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: fantasy;
+    cursor: pointer;
+    outline: none;
+}
+.new_game{
+    padding: 40px;
+}
+.start{
+    width: 100%;
+    height: 30vh;
+    background: rgba(224, 224, 224, 0.445);
+    margin: auto;
+    /* position: absolute; */
+}
+.title{
+    text-align: center;
+    color: #1bfc07;
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+.players{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+.player{
+    width: 25%;
+    height: 150px;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.player_info{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    background: #fff;
+    border-radius: 20px;
+}
+.score_bord{
+    width:50%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+}
+.active{
+    box-shadow: 0 8px 1px 0px #07fcc7;
+    color:#b707fc;
+    transition: 0.2s ease-in-out;
+}
+.container{
+    width: 90%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.game_space{
+    width: 30%;
+    height: 70%;
+    display: inline-block;
+}
+.game_bord{
+    background-color: rgba(255, 0, 179, 0.63);
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto;
+    grid-gap: 10px 10px ;
+    grid-template-columns: repeat(auto-fill,minmax(100px,1fr));
+}
+.box{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(26, 0, 48);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle{
+    width: 100%;
+    height: 100%;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.cross_value{
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: #cbfccb;
+    filter: drop-shadow(0px 0px 2px #1bfc07);
+    text-shadow: 0px 0px 4px #1bfc07;
+}
+.circle_value{
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color:  #c2faf1;
+    filter: drop-shadow(0px 0px 4px #07fce8);
+    text-shadow: 0px 0px 4px #07fcc7;
+}
+@media only screen and (max-width: 600px) {
+    .start {
+        width: 100%;
+        height: 20vh;
+        background: rgba(224, 224, 224, 0.445);
+        margin: auto;
+    }
+    .title {
+        text-align: center;
+        color: #1bfc07;
+        font-size: 25px;
+        letter-spacing: 2px;
+    }
+    .players {
+        width: 100%;
+        height: 17vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .player {
+        width: 46%;
+        height: 140px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+    }
+    .player_info {
+        font-size: 12px;
+        width: 95%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        background: #fff;
+        border-radius: 20px;
+    }
+    .score_bord {
+        width: 50%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 25px;
+        color: #fff;
+    }
+    .game_space {
+        width: 100%;
+        height: 70%;
+        display: inline-block;
+    }
+    .win_text {
+        color: #fff;
+        font-size: 17px;
+        font-weight: 300;
+        font-family: Monotype Corsiva;
+    }
+}
