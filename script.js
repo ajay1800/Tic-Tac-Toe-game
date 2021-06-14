@@ -14,17 +14,20 @@ let player2current_score = document.querySelector('.player2_score');
 let dispPlayer1_score = 0;
 let dispPlayer2_score = 0;
 
+let functionCall = false;
 const player1Win = function(){
     dispPlayer1_score++;
     player1Current_score.textContent = dispPlayer1_score;
     won.style.display = 'flex';
-    winText.insertAdjacentHTML('beforeend','<h2>🎉🎉 Congratulation Player 1 Won 🎉🎉</h2>');
+    winText.insertAdjacentHTML('beforeend','<h2>🎉 Congratulation Player 1 Won 🎉</h2>');
+    functionCall = true;
 }
 const player2Win = function(){
     dispPlayer2_score++;
     player2current_score.textContent = dispPlayer2_score;
     won.style.display = 'flex';
-    winText.insertAdjacentHTML('beforeend','<h2>🎉🎉 Congratulation Player 2 Won 🎉🎉</h2>');
+    winText.insertAdjacentHTML('beforeend','<h2>🎉 Congratulation Player 2 Won 🎉</h2>');
+    functionCall = true;
 }
 let player1 = true;
 let player2 = false;
@@ -154,9 +157,13 @@ value.forEach(e => e.addEventListener('click',(el) => {
                             if(winValue7 != ''){
                                 if(winValue8 != ''){
                                     if(winValue9 != ''){
-                                        console.log('draw')
-                                        won.style.display = 'flex';
-                                        winText.insertAdjacentHTML('beforeend',`<h2>Let's Fight Again 💪</h2>`);
+                                           if(!functionCall){
+                                            console.log('draw');
+                                            won.style.display = 'flex';
+                                            winText.insertAdjacentHTML('beforeend',`<h2>Let's Fight Again 💪</h2>`);
+                                        }else if(functionCall){
+
+                                        }
                                     }
                                 }
                             }
@@ -175,5 +182,5 @@ newGame.addEventListener('click',function(){
         e.innerHTML = '';
     });
     winText.innerHTML = '';
-    
+    functionCall = false;
 })
