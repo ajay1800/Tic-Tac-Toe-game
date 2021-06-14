@@ -206,7 +206,7 @@ body{
     }
     .win_text {
         color: #fff;
-        font-size: 14px;
+        font-size: 17px;
         font-weight: 300;
         font-family: Monotype Corsiva;
     }
@@ -224,5 +224,11 @@ body{
         display: flex;
         justify-content: space-around;
         align-items: center;
+    }
+    .win_text {
+    color: rgb(255 255 255);
+    font-size: 14px !important;
+    font-weight: 300;
+    font-family: Monotype Corsiva;
     }
 }
