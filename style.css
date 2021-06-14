@@ -211,3 +211,18 @@ body{
         font-family: Monotype Corsiva;
     }
 }
+@media only screen and (max-width: 400px){
+    .start {
+        width: 100%;
+        height: 25vh;
+        background: rgb(224 224 224 / 45%);
+        margin: auto;
+    }
+    .players {
+        width: 100%;
+        height: 23vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
